@@ -4,7 +4,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: '0 1 * * 6'
+    - cron: '0 2 * * 3'
 
 jobs:
   CodeQL-Build:
@@ -27,7 +27,7 @@ jobs:
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
-      with:
+      with: 
         config-file: ./.github/codeql/codeql-config.yml
       # Override language selection by uncommenting this and choosing your languages
       # with:
